@@ -23,4 +23,6 @@ Slide the seek bar and watch the blocks change color! Visit the MoMA website fro
 
 Import the project folder into Android Studio or Eclipse
 
+### Errors and Testing
 
+Work in progress.
