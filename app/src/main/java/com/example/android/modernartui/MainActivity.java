@@ -21,11 +21,18 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //Get data from previous instance if not first session
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Initialize seek bar
+
         sb = (SeekBar) findViewById(R.id.slider);
         sb.setMax(100);
+
+        //Initialize colored boxes
 
         final TextView redbox1 = (TextView) findViewById(R.id.redbox1);
         final TextView yellowbox1 = (TextView) findViewById(R.id.yellowbox1);
@@ -39,22 +46,30 @@ public class MainActivity extends Activity {
         //final int blueVal = getResources().getColor(R.color.blue);
         //final int yellowVal = getResources().getColor(R.color.yellow);
 
+        //Manage seek bar slide behavior
+
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
+            //Target colors
             //Turquoise is #00E5EE R0 G229 B238
             //Orange is #FF6600 R255 G102 B0
             //Purple is #BE00FF R130 G0 B130
+
 
             int progChange = 0;
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
+                //Initial color state values
+
                 int[] redArray = {255, 0, 0};
                 int[] blueArray = {0, 0, 255};
                 int[] yellowArray = {255, 255, 0};
 
                 progChange = progress;
+
+                //Make incremental color value changes
 
                 redArray[0] = redArray[0] - (255/100)*progChange;
                 redArray[1] = redArray[1] + (229/100)*progChange;
@@ -65,6 +80,8 @@ public class MainActivity extends Activity {
                 yellowArray[0] = yellowArray[0] - (125/100)*progChange;
                 yellowArray[1] = yellowArray[1] - (255/100)*progChange;
                 yellowArray[2] = yellowArray[2] + (130/100)*progChange;
+
+                //Set the boxes to new colors
 
                 redbox1.setBackgroundColor(Color.rgb(redArray[0],redArray[1],redArray[2]));
                 redbox2.setBackgroundColor(Color.rgb(redArray[0],redArray[1],redArray[2]));
