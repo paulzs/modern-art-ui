@@ -3,7 +3,7 @@
 
 ### Overview
 
-A simple Android app that uses linear layouts, dialogs and a seek bar
+A simple Android app that uses linear layouts, dialogs and a seek bar. Inspired by Pieter Cornelis "Piet" Mondrian.
 
 ### Features
 
