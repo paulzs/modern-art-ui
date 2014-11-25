@@ -149,6 +149,8 @@ public class MainActivity extends Activity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
+            //Initialize and format dialog
+            //
             TextView dialog_title = new TextView(this);
             dialog_title.setText(R.string.dialog_title);
             dialog_title.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -177,7 +179,6 @@ public class MainActivity extends Activity {
             });
 
             AlertDialog dialog = builder.show();
-
 
             TextView dialog_msg = (TextView) dialog.findViewById(android.R.id.message);
 
