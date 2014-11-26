@@ -7,7 +7,7 @@ A simple Android app that uses linear layouts, dialogs and a seek bar. Inspired 
 
 ### Features
 
-Slide the seek bar and watch the blocks change color! Visit the MoMA website from the options menu for more information.
+Slide the seek bar and watch the blocks change color! oOoOoOo aAaAaAa. Wow. Such color. Very art. Visit the MoMA website from the options menu for more information.
 
 ![](https://raw.githubusercontent.com/paulzs/modern-art-ui/master/ScreenShot1.png)
 
